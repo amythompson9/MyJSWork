@@ -92,7 +92,7 @@ console.log(typeof x);
 *Operator Precedence
 *JS knows which operator to do first - order of operations
 */
-
+/*
 var now = 2018;
 var yearJohn = 1989;
 var fullAge = 18;
@@ -124,3 +124,31 @@ console.log(x);
 x = x + 1;
 x += 1;
 x++;
+*/
+
+/*******************************
+*Coding Challenge 1
+*/
+
+/*
+BMI = mass / height^2 = mass / (heaight * height).
+
+1. Store Mark's and John's mass and height in Variables
+2. Calculate both their BMIs
+3. Create a boolean variable containing
+information about whether Mark has a higher BMI than JOhn.
+4. Print a string to the console containing the Variablefrom Step 3.
+Is Mark's BMI higher than John's? true
+
+
+var markMass = 78;
+var johnMass = 92;
+var markHeight = 1.69;
+var johnHeight = 1.95;
+
+var bmiMark = markMass / (markHeight * markHeight);
+var bmiJohn = johnMass / (johnHeight * johnHeight);
+console.log(bmiMark, bmiJohn);
+var markGreater = bmiMark > bmiJohn;
+console.log("Is Mark's BMI higher than John's?" + " " + markGreater);
+*/
