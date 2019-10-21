@@ -288,3 +288,40 @@ if (height == '23') {
   console.log('The == operator does type coercion.');
 }
 */
+
+/************************
+*Coding Challenge 2
+*/
+/*
+1. Calculate the averge score for each team
+2. Decide which teams wins in average, print the winner
+3. Change the scores to show differenct winners. There might be a draw.
+4. Mary also plays - log the average winner, use the &&
+5. Change the score to generate a different winner
+*/
+/*
+var mikeAverage = (116 + 94 + 123) / 3;
+var johnAverage = (89 + 120 + 103) / 3;
+var maryAverage = (97 + 134 + 105) / 3;
+console.log(mikeAverage, johnAverage, maryAverage);
+*/
+/*
+if (johnAverage > mikeAverage) {
+  console.log('John\'s team wins with ' + johnAverage + ' points.');
+} else if (mikeAverage > johnAverage) {
+  console.log('Mike\'s team wins with ' + mikeAverage + ' points.' );
+} else {
+  console.log('There is a draw.');
+}
+*/
+/*
+if (johnAverage > mikeAverage && johnAverage > maryAverage) {
+  console.log('John\'s team wins with ' + johnAverage + ' points.');
+} else if (mikeAverage > johnAverage && mikeAverage > maryAverage) {
+  console.log('Mike\'s team wins with ' + mikeAverage + ' points.' );
+} else if (maryAverage > johnAverage && maryAverage > mikeAverage) {
+  console.log('Mary\'s team wins with ' + maryAverage + ' points.' );
+} else {
+  console.log('There is a draw.');
+}
+*/
