@@ -387,3 +387,45 @@ console.log(whatDoYouDo('teacher', 'John'));
 console.log(whatDoYouDo('designer', 'Jane'));
 console.log(whatDoYouDo('retired', 'Mark'));
 */
+
+/***********************************
+*Arrays
+*/
+//initialize new array
+/*
+var names = ['John', 'Mark', 'Jane'];
+var years = new Array(1990, 1969, 1948);
+
+//find element at index, print all, how many
+console.log(names[0]);
+console.log(names);
+console.log(names.length);
+//manipulate/change an Array
+names[1] = 'Ben';
+console.log(names);
+//add to an Array
+names[4] = 'Mary';
+console.log(names);
+names[names.length] = 'Beth';
+console.log(names);
+
+//Different data types
+var john = ['John', 'Smith', 1990, 'teacher', false];
+//add a data type at the end with push function
+john.push('blue');
+console.log(john);
+//add data type a the beginning with unshift
+john.unshift('Mr.');
+console.log(john);
+//remove element from the end with pop
+john.pop();
+console.log(john);
+//remove element from the beginning with shift
+john.shift();
+console.log(john);
+//indexOf - return position in Array
+console.log(john.indexOf(1990));
+
+var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer.'
+console.log(isDesigner);
+*/
