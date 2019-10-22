@@ -471,3 +471,44 @@ var finalValues = [bills[0] + tips[0],
                    bills[2] + tips[2]];
 console.log(tips, finalValues);
 */
+
+/***********************************
+*Objects and properties
+Objects - key/value pairs
+each object has a name - the key
+
+In arrays, order matter a lot
+In objects, order does not matter
+*/
+//Object literal
+var john = {
+  //firstName is the key
+  //firstName is a property of the John object
+  //John is the value
+  firstName: 'John',
+  lastName: 'Smith',
+  birthYear: 1990,
+  family: ['Jane', 'Mark', 'Bob', 'Emily'],
+  job: 'teacher',
+  isMarried: false
+};
+
+console.log(john);
+//how to retrieve data from an object
+console.log(john.firstName);
+console.log(john['lastName']);
+var x = 'birthYear';
+console.log(john[x]);
+
+//mutate an object
+john.job = 'designer';
+john['isMarried'] = true;
+console.log(john);
+
+//new Object syntax
+//initialize new object
+var jane = new Object();
+jane.firstName = 'Jane';
+jane.birthYear = 1969;
+jane['lastName'] = 'Smith';
+console.log(jane);
