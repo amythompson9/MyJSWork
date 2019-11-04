@@ -481,6 +481,7 @@ In arrays, order matter a lot
 In objects, order does not matter
 */
 //Object literal
+/*
 var john = {
   //firstName is the key
   //firstName is a property of the John object
@@ -512,3 +513,34 @@ jane.firstName = 'Jane';
 jane.birthYear = 1969;
 jane['lastName'] = 'Smith';
 console.log(jane);
+*/
+
+/***********************************
+*Objects and Methods
+- Objects can hold different types of data
+- Can attach functions to objects - these functions are called Methods
+
+*/
+
+var john = {
+  //firstName is the key
+  //firstName is a property of the John object
+  //John is the value
+  firstName: 'John',
+  lastName: 'Smith',
+  birthYear: 1992,
+  family: ['Jane', 'Mark', 'Bob', 'Emily'],
+  job: 'teacher',
+  isMarried: false,
+  calcAge: function() {
+    return 2018 - this.birthYear;
+    //or
+    //this.age = 2018 - this.birthYear;
+  }
+};
+
+var age = john.calcAge();
+john.age = john.calcAge();
+//or
+//john.calcAge();
+//console.log(john);
