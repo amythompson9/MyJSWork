@@ -521,7 +521,7 @@ console.log(jane);
 - Can attach functions to objects - these functions are called Methods
 
 */
-
+/*
 var john = {
   //firstName is the key
   //firstName is a property of the John object
@@ -544,3 +544,50 @@ john.age = john.calcAge();
 //or
 //john.calcAge();
 //console.log(john);
+*/
+
+/***********************************
+*Coding Challenge 4
+1. For each Mark and John, create an object with properties for
+their full name, mass, and height.
+2. Add a method to each object to calculate the BMI.
+Save the BMI to the object and also return it from the Method.
+3. Log who has the highest BMI together with the full name and the
+BMI. They might have the same BMI
+
+*/
+
+var john = {
+  fullName: 'John Smith',
+  mass: 47,
+  height: 1.5,
+  johnBMI: function() {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+  }
+}
+
+var mark = {
+  fullName: 'Mark Johnson',
+  mass: 147,
+  height: 1.5,
+  markBMI: function() {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi;
+  }
+}
+
+john.johnBMI();
+mark.markBMI();
+
+console.log(john, mark);
+
+if (john.bmi > mark.bmi) {
+  console.log(john.fullName + " has the larger BMI of " + john.bmi + ".");
+}
+else if (john.bmi < mark.bmi) {
+  console.log(mark.fullName + " has the larger BMI of " + mark.bmi + ".");
+}
+else {
+  console.log(john.fullName + " and " + mark.fullName + " have the same BMI of " + mark.bmi + ".");
+}
