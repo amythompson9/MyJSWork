@@ -547,47 +547,55 @@ john.age = john.calcAge();
 */
 
 /***********************************
-*Coding Challenge 4
-1. For each Mark and John, create an object with properties for
-their full name, mass, and height.
-2. Add a method to each object to calculate the BMI.
-Save the BMI to the object and also return it from the Method.
-3. Log who has the highest BMI together with the full name and the
-BMI. They might have the same BMI
-
+Loops and Iteration
+Loops are control structures
+Automate repetitive tassks
 */
 
-var john = {
-  fullName: 'John Smith',
-  mass: 47,
-  height: 1.5,
-  johnBMI: function() {
-    this.bmi = this.mass / (this.height * this.height);
-    return this.bmi;
-  }
+/*Print numbers 0-9
+for (var i = 0; i < 10; i++) {
+  console.log(i);
+}
+*/
+
+//var john = ['John', 'Smith', 1990, 'designer', false];
+/*
+console.log(john[0]);
+console.log(john[1]);
+console.log(john[2]);
+console.log(john[3]);
+console.log(john[4]);
+//for loop
+for (var i = 0; i < john.length; i++) {
+  console.log(john[i]);
+}
+*/
+
+//while loop
+/*
+var i = 0;
+while (i < john.length) {
+  console.log(john[i]);
+  i++
+}
+*/
+
+//continue and break Statements
+/*
+var john = ['John', 'Smith', 1990, 'designer', false];
+
+for (var i = 0; i < john.length; i++) {
+  if (typeof john[i] !== 'string') continue;
+  console.log(john[i]);
 }
 
-var mark = {
-  fullName: 'Mark Johnson',
-  mass: 147,
-  height: 1.5,
-  markBMI: function() {
-    this.bmi = this.mass / (this.height * this.height);
-    return this.bmi;
-  }
+for (var i = 0; i < john.length; i++) {
+  if (typeof john[i] !== 'string') break;
+  console.log(john[i]);
 }
 
-john.johnBMI();
-mark.markBMI();
-
-console.log(john, mark);
-
-if (john.bmi > mark.bmi) {
-  console.log(john.fullName + " has the larger BMI of " + john.bmi + ".");
+//looping in reverse
+for (var i = john.length - 1; i >= 0; i--) {
+  console.log(john[i]);
 }
-else if (john.bmi < mark.bmi) {
-  console.log(mark.fullName + " has the larger BMI of " + mark.bmi + ".");
-}
-else {
-  console.log(john.fullName + " and " + mark.fullName + " have the same BMI of " + mark.bmi + ".");
-}
+*/
