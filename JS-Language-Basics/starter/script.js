@@ -637,7 +637,7 @@ Use objects and Loops
   Log to the console which family paid the highest tips on average
 */
 //PART 1
-
+/*
 var john = {
     fullName: 'John Smith',
     bills: [124, 48, 268, 180, 42],
@@ -710,3 +710,31 @@ if (john.average > mark.average) {
 else if (john.average < mark.average){
   console.log(mark.fullName + '\'s family pays higher tips, with an average of $' + mark.average);
 }
+*/
+
+/***********************************
+JavaScript Versions
+OG - LiveScript
+Nothing to do with Java - just marketing languages
+ES1 (ECMAScript 1) became the first version of the JS language standard
+  ECMAScript : Language standard
+  JavaScript : the language in practice
+  ES5 (ECMAScript 5) : released with new features
+  ES6/ES2015 (ECMAScript 2015) : biggest update ever
+  Now there is an annual release cycle with a few new elements
+
+  ES5 - fully supported in all browers
+      - ready to be used today
+
+  ES6/7/8 - well supported in all modern browers
+          - no support in older browers
+          - can use most features in production with transpiling
+            and polyfilling (converting to ES5)
+
+  Future Versions
+
+  ES9/10 - called ESNext
+         - Some features supported in modern browers
+         - Can already use some features in production
+          with transpiling and polyfilling
+*/
