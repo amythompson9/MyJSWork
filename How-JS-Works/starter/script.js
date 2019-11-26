@@ -131,23 +131,26 @@ console.log(age);
 //Scoping and the Scope Chain
 /*
 SCOPING IN JS
-- Scoping answers the question 'where can we access a ceratin variable?'
+- Scoping answers the question 'where can we access a certain variable?'
 - Each new function creates a scope: the space/environment, in which
   the variables it defines are accessible
   - the only way to create a new scope is to write a new function
+- Lexical scoping: a function that is lexically within another function
+  gets access to the scope of the outer function (parent function) also
+  gets access to variables
 */
 
 // First scoping example
 
 /*
-var a = 'Hello!';
+var a = 'Hello!'; //Global scope --> VoGlobl
 first();
 
-function first() {
+function first() { //first() scope --> V01 + VoGlobl
     var b = 'Hi!';
     second();
 
-    function second() {
+    function second() { //second scope --> V0 2 + V01 + VoGlobl
         var c = 'Hey!';
         console.log(a + b + c);
     }
@@ -182,3 +185,51 @@ function third() {
 
 ///////////////////////////////////////
 // Lecture: The this keyword
+/*
+- Variable that each execution context uses
+- regular function call: the this keyword point at the global object,
+(the window object, in the browser)
+- method call (function attached to an object): the this variable point to the object
+that is calling the method.
+- the THIS keyword is not assigned a value until a function where it is defined
+is actually called.
+
+*/
+
+//The this keyword in practice
+
+//console.log(this); //this won't work
+/*
+calculateAge(1985);
+
+function calculateAge(year) {
+  console.log(2016 - year);
+  console.log(this);
+}
+*/
+/*
+var john = {
+  name: 'John',
+  yearOfBirth: 1990,
+  calculateAge: function() {
+    console.log(this);
+    console.log(2016 - this.yearOfBirth);
+/*
+    function innerFunction() {
+      console.log(this);
+    }
+    innerFunction();
+*/
+  }
+}
+/*
+john.calculateAge();
+
+var mike = {
+  name: 'Mike',
+  yearOfBirth: 1984
+};
+
+mike.calculateAge = john.calculateAge;
+mike.calculateAge();
+*/
